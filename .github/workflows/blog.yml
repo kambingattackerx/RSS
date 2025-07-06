@@ -1,7 +1,7 @@
 name: ✍️ Update blog posts
 on:
   schedule:
-    - cron: '0 * * * *'  # setiap 1 jam
+    - cron: '0 * * * *'  # setiap 1 menit
   workflow_dispatch:
 
 jobs:
