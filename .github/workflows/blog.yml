@@ -1,0 +1,15 @@
+name: ✍️ Update blog posts
+on:
+  schedule:
+    - cron: '0 * * * *'  # setiap 1 jam
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    name: Get RSS Feed and Update README
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://gist.githubusercontent.com/kambingattackerx/34e4f4a4a1f10f06d6788450097a5e28/raw/0aa53d34cceee7d4780bf496bb0d30dcc73ddcd1/gistfile1.txt"
